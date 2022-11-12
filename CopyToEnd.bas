@@ -16,7 +16,7 @@ Public Sub CopyToEnd()
     
     For n = RowNum + 1 To RowLast
         If (Cells(n, ColNum - 1) <> vbNullString And Not Cells(n, 1).Font.Bold) Then
-            Cells(n, ColNum).PasteSpecial Paste:=xlPasteValues
+            Cells(n, ColNum).PasteSpecial Paste:=xlAll
         End If
     Next n
     
