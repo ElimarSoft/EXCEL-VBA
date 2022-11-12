@@ -1,4 +1,4 @@
-Attribute VB_Name = "CopyToEndModule"
+Attribute VB_Name = "CopyToEnd"
 Option Explicit
 
 'Select a cell to copy the column down to the end of sheet
