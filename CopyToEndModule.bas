@@ -1,8 +1,8 @@
 Attribute VB_Name = "CopyToEndModule"
 Option Explicit
 
-'Select a cell and copy in the column down to the end of sheet
-'If some rows are blank or are boldfaced will be skipped 
+'Select a cell to copy the column down to the end of sheet
+'Skip blank or boldfaced rows 
 
 Public Sub CopyToEnd()
 
