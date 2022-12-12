@@ -1,0 +1,26 @@
+Public Sub HideColumns()
+
+    Dim col1 As Range
+    Dim row1 As Range
+    Dim ws1 As Worksheet
+    
+    Set ws1 = ActiveSheet
+    
+    For Each col1 In ws1.UsedRange.Columns
+    
+        Dim DataVal As String: DataVal = vbNullString
+        col1.Hidden = True
+        For Each row1 In ws1.UsedRange.Rows
+            
+            If (DataVal = vbNullString) Then
+                DataVal = ws1.Cells(row1.Row, col1.Column)
+            ElseIf (DataVal <> ws1.Cells(row1.Row, col1.Column)) Then
+                col1.Hidden = False
+                Exit For
+            End If
+        
+        Next
+
+    Next
+
+End Sub
