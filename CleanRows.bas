@@ -9,7 +9,7 @@ Public Sub CleanRows(rowNum As Integer, colNum As Integer)
     Set ws1 = ActiveSheet
     data = ws1.Cells(rowNum, colNum)
     
-    For Each row1 In ws1.UsedRange
+    For Each row1 In ws1.UsedRange.Rows
         If (ws1.Cells(row1.Row, colNum) = data) Then row1.Delete
     Next
 
